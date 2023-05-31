@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 177901214}
   - component: {fileID: 177901213}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SpelRegels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1315,7 +1315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1297448767
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1635,7 +1635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1878911600
 RectTransform:
   m_ObjectHideFlags: 0
