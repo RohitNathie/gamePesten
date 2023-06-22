@@ -183,16 +183,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Aantal spelers: Twee of meer spelers.
 
-    
 
-    Doel van het spel:
-    Het doel van het spel is om als eerste al je kaarten weg te spelen.
 
-    
+    Doel van het spel: Het doel
+    van het spel is om als eerste al je kaarten weg te spelen.
 
-    Kaarten:
-    Het spel wordt gespeeld met een standaard kaartspel van 52 kaarten. Er kunnen
-    ook meerdere kaartspellen worden gebruikt voor grotere groepen spelers.
+
+
+    Kaarten: Het
+    spel wordt gespeeld met een standaard kaartspel van 52 kaarten. Er kunnen ook
+    meerdere kaartspellen worden gebruikt voor grotere groepen spelers.
 
 '
   m_isRightToLeft: 0
