@@ -32,32 +32,58 @@ public class Card : MonoBehaviour
         }
     }
 
-    private bool IsPlayable(Card lastPlayedCard, string currentSuit)
+    public void PlayCard(GameManager gameManager)
+{
+    // Check if the card is playable
+    if (IsPlayable(gameManager.lastPlayedCard, gameManager.currentSuit))
     {
-        // Implement the logic to determine if the card can be played based on the game rules
-        // In Crazy 8's, the card can be played if it has the same suit or rank as the last played card,
-        // or if it is an 8 and the player can choose a new suit.
+        // Perform actions for playing the card
+        Debug.Log("Card played: " + rank + " of " + suit);
 
-        // If the lastPlayedCard is null (e.g., first card of the game), any card can be played.
-        if (lastPlayedCard == null)
-        {
-            return true;
-        }
+        // Update the game state with the last played card and current suit
+        gameManager.lastPlayedCard = this;
+        gameManager.currentSuit = suit;
 
-        // Check if the ranks or suits match
-        if (rank == lastPlayedCard.rank || suit == lastPlayedCard.suit)
-        {
-            return true;
-        }
-
-        // Allow playing 8s regardless of the last played card
-        if (rank == 8)
-        {
-            return true;
-        }
-
-        return false;
+        // End the turn
+        gameManager.EndTurn();
     }
+    else
+    {
+        // Card is not playable, so take appropriate action (e.g., show a message, highlight invalid selection, etc.)
+        Debug.Log("Cannot play this card!");
+    }
+}
+
+
+    public bool IsPlayable(Card lastPlayedCard, string currentSuit)
+{
+    // If the lastPlayedCard is null (e.g., first card of the game), any card can be played.
+    if (lastPlayedCard == null)
+    {
+        return true;
+    }
+
+    // Check if the ranks or suits match
+    if (rank == lastPlayedCard.rank || suit == lastPlayedCard.suit)
+    {
+        return true;
+    }
+
+    // Allow playing 8s regardless of the last played card
+    if (rank == 8)
+    {
+        return true;
+    }
+
+    // Allow playing any card of the current suit
+    if (suit == currentSuit)
+    {
+        return true;
+    }
+
+    return false;
+}
+
 
     private string ChooseNewSuit(GameManager gameManager)
     {
