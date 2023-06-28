@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
                 // Play the selected card
                 if (selectedCard != null)
                 {
-                    selectedCard.Play(this);
+                    selectedCard.PlayCard(this);
                 }
             }
         }
