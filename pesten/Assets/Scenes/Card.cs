@@ -16,12 +16,6 @@ public class Card : MonoBehaviour
             // Add your own specific actions here, for example:
             Debug.Log("Card played: " + rank + " of " + suit);
 
-            // Update the current suit if an 8 is played
-            if (rank == 8)
-            {
-                gameManager.currentSuit = ChooseNewSuit(gameManager);
-            }
-
             // End the player's turn
             gameManager.EndTurn();
         }
@@ -83,16 +77,4 @@ public class Card : MonoBehaviour
 
     return false;
 }
-
-
-    private string ChooseNewSuit(GameManager gameManager)
-    {
-        // Implement the logic for choosing a new suit when an 8 is played
-        // This can be done through player input or AI logic
-
-        // For simplicity, let's assume the new suit is chosen randomly
-        string[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
-        int randomIndex = Random.Range(0, suits.Length);
-        return suits[randomIndex];
-    }
 }
